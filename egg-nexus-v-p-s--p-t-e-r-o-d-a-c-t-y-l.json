@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-08-07T22:49:46+02:00",
+    "name": "Nexus VPS # PTERODACTYL",
+    "author": "discord@j6_o",
+    "description": "Nexus VPS [ DISCORD: j6_o ]",
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/pterodactyl\/yolks:debian": "ghcr.io\/pterodactyl\/yolks:debian"
+    },
+    "file_denylist": [],
+    "startup": ".\/install.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{}",
+        "logs": "{}",
+        "stop": "exit"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# hello\r\ncd \/mnt\/server\r\ncurl https:\/\/github.com\/abdalla435\/VPS-Pterodactyl-EGG\/raw\/main\/install.sh -o install.sh\r\n\r\necho \"meow\"",
+            "container": "ghcr.io\/pterodactyl\/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
