@@ -4,6 +4,7 @@
 if [ -f /home/container/installer.sh ]; then
     bash /home/container/installer.sh
 fi
+bash /home/container/style.sh
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
