@@ -22,7 +22,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n# hello\r\ncd \/mnt\/server\r\ncurl https:\/\/raw.githubusercontent.com\/dxomg\/vpsfreepterovm\/main\/PteroVM.sh -o install.sh\r\nchmod -R 777 *\r\necho \"click start~ meow\"",
+            "script": "#!\/bin\/bash\r\n# hello\r\ncd \/mnt\/server\r\ncurl https:\/\/raw.githubusercontent.com\/abdalla435\/VPS-Pterodactyl-EGG\/main\/PteroVM.sh -o install.sh\r\nchmod -R 777 *\r\necho \"click start~ meow\"",
             "container": "ghcr.io\/pterodactyl\/installers:debian",
             "entrypoint": "bash"
         }
