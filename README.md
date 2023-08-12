@@ -11,6 +11,5 @@
 # Here ya go, Done! 
 ---------------------
 # ✨ Credits
-
-- JOO / DC: j6_o
 - dxomg / DC: dxomg
+- JOO / DC: j6_o
