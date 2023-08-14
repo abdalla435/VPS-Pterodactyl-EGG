@@ -15,7 +15,7 @@ echo "
 echo "Select an option:"
 echo "1) LXDE - XRDP"
 echo "2) PufferPanel"
-
+echo "3) Install Basic Packages"
 read option
 
 if [ $option -eq 1 ]; then
@@ -66,6 +66,16 @@ elif [ $option -eq 2 ]; then
     systemctl restart pufferpanel
     clear
     echo -e "${GREEN}PufferPanel Created & Started - PORT: ${NC}$pufferPanelPort${GREEN}"
+elif [ $option -eq 3 ]; then
+clear
+    echo -e "${RED}Downloading... Please Wait"
+     apt update && apt upgrade -y
+     apt install git curl wget sudo lsof iputils-ping -y
+     curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py
+     chmod -R 777 /bin/systemctl
+     clear
+    echo -e "${GREEN}Basic Packages Installed!" 
+    echo -e "${RED}sudo / curl / wget / git / lsof / ping"
 else
     echo -e "${RED}Invalid option selected.${NC}"
 fi
