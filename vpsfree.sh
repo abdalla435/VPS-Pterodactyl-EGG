@@ -53,12 +53,14 @@ elif [ $option -eq 2 ]; then
     read pufferPanelPort
 
     sed -i "s/\"host\": \"0.0.0.0:8080\"/\"host\": \"0.0.0.0:$pufferPanelPort\"/g" /etc/pufferpanel/config.json
-    echo -e "${YELLOW}Admin Username:"
+    echo -e "${YELLOW}Enter the username for the admin user:"
     read adminUsername
-    echo -e "${YELLOW}Admin Password:"
+    echo -e "${YELLOW}Enter the password for the admin user:"
     read adminPassword
+    echo -e "${YELLOW}Enter the email for the admin user:"
+    read adminEmail
 
-    pufferpanel user add --username "$adminUsername" --password "$adminPassword" --admin
+    pufferpanel user add --name "$adminUsername" --password "$adminPassword" --email "$adminEmail" --admin
     clear
     echo -e "${GREEN}Admin user $adminUsername added successfully!${NC}"
     systemctl restart pufferpanel
