@@ -47,12 +47,19 @@ elif [ $option -eq 2 ]; then
     curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py
     chmod -R 777 /bin/systemctl
     apt install pufferpanel
-    pufferpanel user add
     echo -e "${GREEN}PufferPanel installation completed!"
     echo -e "${YELLOW}Enter PufferPanel Port"
     read pufferPanelPort
 
     sed -i "s/\"host\": \"0.0.0.0:8080\"/\"host\": \"0.0.0.0:$pufferPanelPort\"/g" /etc/pufferpanel/config.json
+    echo -e "${YELLOW}Admin Username:"
+    read adminUsername
+    echo -e "${YELLOW}Admin Password:"
+    read adminPassword
+
+    pufferpanel user add --username "$adminUsername" --password "$adminPassword" --admin
+    clear
+    echo -e "${GREEN}Admin user $adminUsername added successfully!${NC}"
     systemctl restart pufferpanel
     clear
     echo -e "${GREEN}PufferPanel Created & Started - PORT: ${NC}$pufferPanelPort${GREEN}"
