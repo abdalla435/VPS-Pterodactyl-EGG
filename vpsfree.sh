@@ -134,7 +134,7 @@ bash /tmp/nodesource_setup.sh
 apt update -y
 apt install -y nodejs
 clear
-echo "${GREEN}Node.js version $version has been installed."
+echo -e "${GREEN}Node.js version $version has been installed."
 
 else
     echo -e "${RED}Invalid option selected.${NC}"
