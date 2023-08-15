@@ -41,6 +41,7 @@ elif [ $option -eq 2 ]; then
     clear
     echo -e "${RED}Downloading... Please Wait"
     apt update && apt upgrade -y
+    export SUDO_FORCE_REMOVE=yes
     apt remove sudo -y
     apt install curl wget git python3 -y
     curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | bash
