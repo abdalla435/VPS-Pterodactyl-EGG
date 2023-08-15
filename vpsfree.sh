@@ -127,7 +127,7 @@ case $choice in
         ;;
 esac
 echo -e "${RED}Downloading... Please Wait"
-apt remove --purge node* nodejs npm
+apt remove --purge node* nodejs npm -y
 apt update && apt upgrade -y && apt install curl -y
 curl -sL "https://deb.nodesource.com/setup_${version}.x" -o /tmp/nodesource_setup.sh
 bash /tmp/nodesource_setup.sh
