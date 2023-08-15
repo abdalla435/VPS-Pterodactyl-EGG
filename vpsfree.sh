@@ -16,6 +16,7 @@ echo "Select an option:"
 echo "1) LXDE - XRDP"
 echo "2) PufferPanel"
 echo "3) Install Basic Packages"
+echo "4) Install Nodejs"
 read option
 
 if [ $option -eq 1 ]; then
@@ -76,6 +77,64 @@ clear
      clear
     echo -e "${GREEN}Basic Packages Installed!" 
     echo -e "${RED}sudo / curl / wget / git / lsof / ping"
+elif [ $option -eq 4 ]; then
+#!/bin/bash
+
+echo "Choose a Node.js version to install:"
+echo "1. 12.x"
+echo "2. 13.x"
+echo "3. 14.x"
+echo "4. 15.x"
+echo "5. 16.x"
+echo "6. 17.x"
+echo "7. 18.x"
+echo "8. 19.x"
+echo "9. 20.x"
+
+read -p "Enter your choice (1-9): " choice
+
+case $choice in
+    1)
+        version="12"
+        ;;
+    2)
+        version="13"
+        ;;
+    3)
+        version="14"
+        ;;
+    4)
+        version="15"
+        ;;
+    5)
+        version="16"
+        ;;
+    6)
+        version="17"
+        ;;
+    7)
+        version="18"
+        ;;
+    8)
+        version="19"
+        ;;
+    9)
+        version="20"
+        ;;
+    *)
+        echo "Invalid choice. Exiting."
+        exit 1
+        ;;
+esac
+echo -e "${RED}Downloading... Please Wait"
+apt update && apt upgrade -y && apt install curl -y
+curl -sL "https://deb.nodesource.com/setup_${version}.x" -o /tmp/nodesource_setup.sh
+bash /tmp/nodesource_setup.sh
+apt update -y
+apt install -y nodejs
+clear
+echo "${GREEN}Node.js version $version has been installed."
+
 else
     echo -e "${RED}Invalid option selected.${NC}"
 fi
