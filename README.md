@@ -1,7 +1,7 @@
 # FREE VPS Pterodactyl [ E . G . G ] 
 ---------------------
-# [ UBUNTU & DEBIAN ] 💚
-- Alphine SOON !
+# [ UBUNTU & DEBIAN & Alphine ] 💚
+- Centos Soon !
 ---------------------
 # 🔶 Installion
 ---------------------
