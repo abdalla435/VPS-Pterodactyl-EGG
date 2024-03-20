@@ -28,14 +28,15 @@ fi
 
 # Download & decompress the Linux root file system if not already installed.
 if [ ! -e "$ROOTFS_DIR/.installed" ]; then
-  echo "#######################################################################################"
-  echo "#"
-  echo "#                                    > ApexCloud VPS <
-  echo "#"
-  echo "#                           Copyright (C) 2022 - 2023, Apex.Cloud"
-  echo "#"
-  echo "#"
-  echo "#######################################################################################"
+echo "#######################################################################################"
+echo "#"
+echo "#                                    > ApexCloud VPS <"
+echo "#"
+echo "#                           Copyright (C) 2022 - 2023, Apex.Cloud"
+echo "#"
+echo "#"
+echo "#######################################################################################"
+
   echo ""
   echo "* [0] Debian"
   echo "* [1] Ubuntu"
