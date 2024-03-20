@@ -30,9 +30,9 @@ fi
 if [ ! -e "$ROOTFS_DIR/.installed" ]; then
   echo "#######################################################################################"
   echo "#"
-  echo "#                                  VPSFREE.ES PteroVM"
+  echo "#                                    > ApexCloud VPS <
   echo "#"
-  echo "#                           Copyright (C) 2022 - 2023, VPSFREE.ES"
+  echo "#                           Copyright (C) 2022 - 2023, Apex.Cloud"
   echo "#"
   echo "#"
   echo "#######################################################################################"
